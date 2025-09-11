@@ -1,0 +1,112 @@
+[
+  {
+    "id": "react",
+    "name": "React",
+    "level": "expert",
+    "category": "frontend",
+    "connections": ["javascript", "typescript", "nextjs", "redux"],
+    "icon": "/icons/react.svg",
+    "color": "#61DAFB",
+    "size": 3,
+    "experience": "5+ years"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "level": "expert",
+    "category": "frontend",
+    "connections": ["javascript", "react", "nodejs", "nextjs"],
+    "icon": "/icons/typescript.svg",
+    "color": "#3178C6",
+    "size": 3,
+    "experience": "4+ years"
+  },
+  {
+    "id": "nextjs",
+    "name": "Next.js",
+    "level": "proficient",
+    "category": "frontend",
+    "connections": ["react", "typescript", "vercel"],
+    "icon": "/icons/nextjs.svg",
+    "color": "#000000",
+    "size": 2.5,
+    "experience": "3+ years"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "level": "expert",
+    "category": "backend",
+    "connections": ["javascript", "typescript", "express", "mongodb"],
+    "icon": "/icons/nodejs.svg",
+    "color": "#339933",
+    "size": 3,
+    "experience": "5+ years"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "level": "proficient",
+    "category": "backend",
+    "connections": ["fastapi", "django", "tensorflow"],
+    "icon": "/icons/python.svg",
+    "color": "#3776AB",
+    "size": 2.5,
+    "experience": "3+ years"
+  },
+  {
+    "id": "mongodb",
+    "name": "MongoDB",
+    "level": "proficient",
+    "category": "backend",
+    "connections": ["nodejs", "express", "mongoose"],
+    "icon": "/icons/mongodb.svg",
+    "color": "#47A248",
+    "size": 2,
+    "experience": "3+ years"
+  },
+  {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "level": "proficient",
+    "category": "backend",
+    "connections": ["prisma", "nodejs", "python"],
+    "icon": "/icons/postgresql.svg",
+    "color": "#336791",
+    "size": 2,
+    "experience": "2+ years"
+  },
+  {
+    "id": "aws",
+    "name": "AWS",
+    "level": "proficient",
+    "category": "cloud",
+    "connections": ["docker", "kubernetes", "terraform"],
+    "icon": "/icons/aws.svg",
+    "color": "#FF9900",
+    "size": 2.5,
+    "experience": "2+ years"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "level": "proficient",
+    "category": "tools",
+    "connections": ["kubernetes", "aws", "nodejs"],
+    "icon": "/icons/docker.svg",
+    "color": "#2496ED",
+    "size": 2,
+    "experience": "2+ years"
+  },
+  {
+    "id": "threejs",
+    "name": "Three.js",
+    "level": "learning",
+    "category": "frontend",
+    "connections": ["javascript", "webgl", "react"],
+    "icon": "/icons/threejs.svg",
+    "color": "#000000",
+    "size": 1.5,
+    "experience": "1 year"
+  }
+]
