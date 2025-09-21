@@ -143,7 +143,7 @@ export const About: React.FC = () => {
                         {transformedContent.interests.map((interest, index) => (
                           <span
                             key={index}
-                            className="px-3 py-1 bg-[var(--color-primary)] bg-opacity-20 text-[var(--color-primary)] rounded-full text-sm"
+                            className="px-3 py-1 bg-[var(--color-primary)] bg-opacity-20 text-white rounded-full text-sm"
                           >
                             {interest}
                           </span>

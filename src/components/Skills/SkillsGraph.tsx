@@ -199,7 +199,7 @@ export const SkillsGraph: React.FC<SkillsGraphProps> = ({ onSkillHover }) => {
     <div className="w-full h-[600px] bg-[var(--color-surface)] rounded-lg overflow-hidden">
       <Canvas
         camera={{ position: [0, 0, 15], fov: 60 }}
-        style={{ background: 'transparent' }}
+        style={{ background: 'black' }}
         gl={{ antialias: true, alpha: true }}
         dpr={[1, 2]}
       >

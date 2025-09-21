@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { TERMINAL_COMMANDS, BOOT_SEQUENCE } from '@/lib/constants';
 
 interface TerminalLine {
@@ -15,6 +15,7 @@ export const useTerminal = () => {
   const [currentCommand, setCurrentCommand] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [bootComplete, setBootComplete] = useState(false);
+  const effectRan = useRef(false);
 
   const addLine = useCallback((text: string, type: TerminalLine['type'] = 'output') => {
     const newLine: TerminalLine = {
@@ -97,8 +98,11 @@ export const useTerminal = () => {
   }, [addLine]);
 
   useEffect(() => {
-    executeBootSequence();
-  }, [executeBootSequence]);
+    if(effectRan.current === false) {
+      executeBootSequence();
+      effectRan.current = true;
+    }
+  }, []);
 
   return {
     lines,

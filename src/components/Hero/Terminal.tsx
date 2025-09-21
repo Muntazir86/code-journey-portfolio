@@ -144,7 +144,7 @@ export const Terminal: React.FC<TerminalProps> = ({ onBootComplete }) => {
                 placeholder="Type a command..."
                 autoFocus
               />
-              <span className="cursor-blink text-[var(--color-terminal-cursor)]">|</span>
+              {/* <span className="cursor-blink text-[var(--color-terminal-cursor)]">|</span> */}
             </form>
           )}
         </div>

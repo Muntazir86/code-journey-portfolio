@@ -14,8 +14,8 @@ interface ThemeStore {
 export const useThemeStore = create<ThemeStore>()(
   persist(
     (set, get) => ({
-      currentTheme: 'dracula',
-      theme: themes.dracula,
+      currentTheme: 'githubDark',
+      theme: themes.githubDark,
       setTheme: (themeName: ThemeName) => {
         const newTheme = themes[themeName];
         set({ currentTheme: themeName, theme: newTheme });

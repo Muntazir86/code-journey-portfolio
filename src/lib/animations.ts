@@ -130,7 +130,7 @@ export const codeTransform: Variants = {
     fontFamily: 'system-ui',
     color: '#f8f8f2',
     backgroundColor: 'transparent',
-    padding: '0',
+    padding: '1rem',
     borderRadius: '0',
     transition: {
       duration: 1.5,

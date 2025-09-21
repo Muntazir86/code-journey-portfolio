@@ -77,16 +77,16 @@ export const Skills: React.FC = () => {
               </div>
             </div>
 
-            <Suspense fallback={
+            {/* <Suspense fallback={
               <div className="w-full h-[600px] bg-[var(--color-surface)] rounded-lg flex items-center justify-center">
                 <div className="text-[var(--color-text-secondary)]">Loading 3D visualization...</div>
               </div>
-            }>
+            }> */}
               <SkillsGraph 
                 hoveredSkill={hoveredSkill}
                 onSkillHover={setHoveredSkill}
               />
-            </Suspense>
+            {/* </Suspense> */}
           </motion.div>
 
           {/* Skills Details Panel */}
