@@ -14,9 +14,16 @@ interface ContactForm {
   message: string;
 }
 
+interface ContactFormResponse {
+  id: string,
+  timestamp: string,
+  status: string,
+  message: string,
+}
+
 export const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [response, setResponse] = useState<{ success: boolean; data?: any; error?: string } | null>(null);
+  const [response, setResponse] = useState<{ success: boolean; data?: ContactFormResponse; error?: string } | null>(null);
   const { ref, shouldAnimate } = useAnimationTrigger({ threshold: 0.3 });
 
   const {
@@ -32,6 +39,7 @@ export const Contact: React.FC = () => {
 
     try {
       // Simulate API call
+      console.log(data);
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Mock successful response
@@ -74,7 +82,7 @@ export const Contact: React.FC = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-[var(--color-text-secondary)] mb-8">
-            Let's discuss your next project or opportunity
+            Let&apos;s discuss your next project or opportunity
           </p>
           <div className="h-1 w-24 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] mx-auto rounded-full" />
         </motion.div>

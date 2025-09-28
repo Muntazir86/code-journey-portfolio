@@ -93,9 +93,7 @@ const ConnectionLine: React.FC<ConnectionLineProps> = ({ start, end, visible }) 
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          count={points.length}
-          array={new Float32Array(points.flatMap(p => [p.x, p.y, p.z]))}
-          itemSize={3}
+          args={[new Float32Array(points.flatMap(p => [p.x, p.y, p.z])), 3, false]}
         />
       </bufferGeometry>
       <lineBasicMaterial color="#50fa7b" transparent opacity={0.6} />

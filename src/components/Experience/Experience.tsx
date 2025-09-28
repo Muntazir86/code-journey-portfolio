@@ -51,7 +51,7 @@ export const Experience: React.FC = () => {
                 {/* Company Logo Placeholder */}
                 <div className="flex items-start space-x-4 mb-4">
                   <div className="w-16 h-16 bg-[var(--color-primary)] bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-[var(--color-primary)] font-bold text-lg">
+                    <span className="text-white font-bold text-lg">
                       {job.company.split(' ').map(word => word[0]).join('').slice(0, 2)}
                     </span>
                   </div>
@@ -83,7 +83,7 @@ export const Experience: React.FC = () => {
                     {job.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-[var(--color-primary)] bg-opacity-20 text-[var(--color-primary)] rounded-full text-sm"
+                        className="px-3 py-1 bg-[var(--color-primary)] bg-opacity-20 text-white rounded-full text-sm"
                       >
                         {tech}
                       </span>

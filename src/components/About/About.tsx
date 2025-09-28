@@ -153,7 +153,7 @@ export const About: React.FC = () => {
                     
                     <div className="pt-4 border-t border-[var(--color-surface)]">
                       <p className="text-[var(--color-text-secondary)] italic">
-                        "{transformedContent.philosophy}"
+                        {transformedContent.philosophy}
                       </p>
                     </div>
                   </div>

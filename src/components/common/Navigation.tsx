@@ -17,8 +17,8 @@ const navItems = [
 export const Navigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isVisible, setIsVisible] = useState(false);
-  const { scrollProgress, scrollDirection } = useScrollProgress();
-  const { toggleTheme, currentTheme } = useTheme();
+  const { scrollProgress } = useScrollProgress();
+  const { toggleTheme } = useTheme();
 
   useEffect(() => {
     setIsVisible(scrollProgress > 0.1);

@@ -136,7 +136,7 @@ export const Skills: React.FC = () => {
                         return connectedSkill ? (
                           <span
                             key={connectionId}
-                            className="px-2 py-1 bg-[var(--color-primary)] bg-opacity-20 text-[var(--color-primary)] rounded text-xs"
+                            className="px-2 py-1 bg-[var(--color-primary)] bg-opacity-20 text-white rounded text-xs"
                           >
                             {connectedSkill.name}
                           </span>
