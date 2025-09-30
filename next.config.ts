@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? '/code-journey-portfolio/' : '',
-  basePath: isProd ? '/code-journey-portfolio' : '',
+  assetPrefix: '',
+  basePath: '',
   output: 'export'
 };
 
