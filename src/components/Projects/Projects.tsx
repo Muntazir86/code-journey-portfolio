@@ -181,11 +181,11 @@ export const Projects: React.FC = () => {
                     e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNDQ0NzVhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2Y4ZjhmMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIE5vdCBGb3VuZDwvdGV4dD48L3N2Zz4=';
                   }}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-transparent bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileHover={{ opacity: 1, scale: 1 }}
-                    className="text-white font-semibold"
+                    className="text-[var(--color-text-primary)] font-semibold"
                   >
                     View Details
                   </motion.div>
@@ -218,24 +218,28 @@ export const Projects: React.FC = () => {
 
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-2">
-                    <a
-                      href={project.liveDemo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors"
-                      onClick={(e) => e.stopPropagation()}
+                    {project.liveDemo && (
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors"
+                        onClick={(e) => e.stopPropagation()}
                     >
                       🔗 Demo
                     </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors"
-                      onClick={(e) => e.stopPropagation()}
+                  )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors"
+                        onClick={(e) => e.stopPropagation()}
                     >
                       📁 Code
                     </a>
+                  )}
                   </div>
                   <span className="text-xs text-[var(--color-text-secondary)]">
                     {project.commits.length} commits
@@ -256,8 +260,8 @@ export const Projects: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
             {[
               { label: 'Public Repos', value: '25+' },
-              { label: 'Total Commits', value: '1,200+' },
-              { label: 'Pull Requests', value: '150+' },
+              { label: 'Total Commits', value: '80+' },
+              { label: 'Pull Requests', value: '15+' },
               { label: 'Code Reviews', value: '300+' },
             ].map((stat, index) => (
               <motion.div

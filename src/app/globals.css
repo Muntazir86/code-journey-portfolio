@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Default Dracula Theme */
-  --color-primary: #bd93f9;
-  --color-secondary: #ff79c6;
-  --color-accent: #50fa7b;
-  --color-background: #282a36;
-  --color-surface: #44475a;
-  --color-text-primary: #f8f8f2;
-  --color-text-secondary: #6272a4;
-  --color-text-muted: #44475a;
-  --color-terminal-background: #282a36;
-  --color-terminal-text: #f8f8f2;
-  --color-terminal-cursor: #50fa7b;
-  --color-terminal-prompt: #bd93f9;
-  --color-syntax-keyword: #ff79c6;
-  --color-syntax-string: #f1fa8c;
-  --color-syntax-number: #bd93f9;
-  --color-syntax-comment: #6272a4;
-  --color-syntax-function: #50fa7b;
-  --color-syntax-variable: #8be9fd;
+  /* GitHub Dark Theme */
+  --color-primary: #58a6ff;
+  --color-secondary: #f85149;
+  --color-accent: #56d364;
+  --color-background: #0d1117;
+  --color-surface: #161b22;
+  --color-text-primary: #f0f6fc;
+  --color-text-secondary: #8b949e;
+  --color-text-muted: #30363d;
+  --color-terminal-background: #0d1117;
+  --color-terminal-text: #f0f6fc;
+  --color-terminal-cursor: #56d364;
+  --color-terminal-prompt: #58a6ff;
+  --color-syntax-keyword: #ff7b72;
+  --color-syntax-string: #a5d6ff;
+  --color-syntax-number: #79c0ff;
+  --color-syntax-comment: #8b949e;
+  --color-syntax-function: #d2a8ff;
+  --color-syntax-variable: #ffa657;
 }
 /* 
 * {

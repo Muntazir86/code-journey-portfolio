@@ -5,12 +5,13 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Text, Sphere } from '@react-three/drei';
 import * as THREE from 'three';
 import { motion } from 'framer-motion';
-import skillsData from '@/data/skills.json';
+// import skillsData from '@/data/skills.json';
+import { Skill } from '@/types/skill';
 
 interface SkillNodeProps {
-  skill: typeof skillsData[0];
+  skill: Skill;
   position: [number, number, number];
-  onHover: (skill: typeof skillsData[0] | null) => void;
+  onHover: (skill: Skill | null) => void;
   isConnected: boolean;
 }
 
@@ -102,13 +103,14 @@ const ConnectionLine: React.FC<ConnectionLineProps> = ({ start, end, visible }) 
 };
 
 interface SkillsSceneProps {
-  onSkillHover: (skill: typeof skillsData[0] | null) => void;
+  skillsData: Skill[];
+  onSkillHover: (skill: Skill | null) => void;
 }
 
-const SkillsScene: React.FC<SkillsSceneProps> = ({ onSkillHover }) => {
-  const [hoveredSkill, setHoveredSkill] = useState<typeof skillsData[0] | null>(null);
+const SkillsScene: React.FC<SkillsSceneProps> = ({ onSkillHover, skillsData }) => {
+  const [hoveredSkill, setHoveredSkill] = useState<Skill | null>(null);
   
-  const handleSkillHover = (skill: typeof skillsData[0] | null) => {
+  const handleSkillHover = (skill: Skill | null) => {
     setHoveredSkill(skill);
     onSkillHover(skill);
   };
@@ -128,7 +130,7 @@ const SkillsScene: React.FC<SkillsSceneProps> = ({ onSkillHover }) => {
     });
     
     return pos;
-  }, []);
+  }, [skillsData]);
 
   const connections = useMemo(() => {
     const lines: Array<{
@@ -188,11 +190,12 @@ const SkillsScene: React.FC<SkillsSceneProps> = ({ onSkillHover }) => {
 };
 
 interface SkillsGraphProps {
-  hoveredSkill: typeof skillsData[0] | null;
-  onSkillHover: (skill: typeof skillsData[0] | null) => void;
+  skillsData: Skill[];
+  hoveredSkill: Skill | null;
+  onSkillHover: (skill: Skill | null) => void;
 }
 
-export const SkillsGraph: React.FC<SkillsGraphProps> = ({ onSkillHover }) => {
+export const SkillsGraph: React.FC<SkillsGraphProps> = ({ onSkillHover, skillsData }) => {
   return (
     <div className="w-full h-[600px] bg-[var(--color-surface)] rounded-lg overflow-hidden">
       <Canvas
@@ -201,7 +204,7 @@ export const SkillsGraph: React.FC<SkillsGraphProps> = ({ onSkillHover }) => {
         gl={{ antialias: true, alpha: true }}
         dpr={[1, 2]}
       >
-        <SkillsScene onSkillHover={onSkillHover} />
+        <SkillsScene onSkillHover={onSkillHover} skillsData={skillsData} />
         <OrbitControls
           enablePan={true}
           enableZoom={true}

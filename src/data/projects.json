@@ -1,58 +1,74 @@
 [
   {
     "id": "1",
-    "title": "E-Commerce Platform",
-    "description": "Full-stack e-commerce solution with React, Node.js, and MongoDB",
-    "techStack": ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-    "liveDemo": "https://demo-ecommerce.com",
-    "github": "https://github.com/username/ecommerce-platform",
-    "thumbnail": "/images/ecommerce-thumb.jpg",
+    "title": "Data Center Services Portal",
+    "description": "Full-stack data center management solution with Angular, Flask, and postgreSQL",
+    "techStack": ["Angular", "Flask", "PostgreSQL"],
+    "liveDemo": "https://www.rebootmonkey.com/",
+    "github": "",
+    "thumbnail": "/images/rebootmonkey.png",
     "highlights": [
-      "Real-time inventory management",
-      "Secure payment processing",
-      "Admin dashboard with analytics"
+      "Enterprise-grade Angular SSR architecture",
+      "Interactive geographical visualization with Mapbox API",
+      "Responsive UI with ngZorro/Ant Design System",
+      "Automated CI/CD pipelines with GitLab",
+      "Real-time data center monitoring",
+      "Optimized system performance and stability"
     ],
     "commits": [
       {
-        "hash": "a1b2c3d",
-        "message": "Initial project setup",
-        "date": "2024-01-15"
+      "hash": "a1b2c3d",
+      "message": "Implement Angular SSR architecture and core components",
+      "date": "2024-03-15"
       },
       {
-        "hash": "e4f5g6h",
-        "message": "Add user authentication",
-        "date": "2024-01-20"
+      "hash": "e4f5g6h",
+      "message": "Integrate Mapbox API for geographical visualization",
+      "date": "2024-04-20"
       },
       {
-        "hash": "i7j8k9l",
-        "message": "Implement shopping cart",
-        "date": "2024-01-25"
+      "hash": "i7j8k9l",
+      "message": "Implement responsive UI with ngZorro and optimize performance",
+      "date": "2024-06-25"
       }
     ]
   },
   {
     "id": "2",
-    "title": "Task Management App",
-    "description": "Collaborative task management with real-time updates",
-    "techStack": ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Socket.io"],
-    "liveDemo": "https://taskmanager-demo.com",
-    "github": "https://github.com/username/task-manager",
-    "thumbnail": "/images/taskmanager-thumb.jpg",
+    "title": "Appointment Booking System",
+    "description": "Enterprise appointment scheduling system integrated with Amelia APIs featuring real-time analytics and secure authentication",
+    "techStack": ["Angular", "TypeScript", "Ruby on Rails", "Docker", "Coolify"],
+    "liveDemo": "",
+    "github": "",
+    "thumbnail": "/images/appointment-thumbnail.jpg",
     "highlights": [
-      "Real-time collaboration",
-      "Drag & drop interface",
-      "Team management features"
+      "Seamless Amelia API integration for backend management",
+      "Responsive Angular frontend with modern UI/UX",
+      "Role-based access control and encrypted data transmission",
+      "Interactive analytics dashboard with real-time visualizations",
+      "Containerized deployment with Docker and Coolify",
+      "75% reduction in deployment time through automation"
     ],
     "commits": [
       {
         "hash": "m1n2o3p",
-        "message": "Setup Next.js project",
+        "message": "Initial Angular setup with Amelia API integration",
         "date": "2024-02-01"
       },
       {
         "hash": "q4r5s6t",
-        "message": "Add real-time updates",
-        "date": "2024-02-10"
+        "message": "Implement authentication and role-based access",
+        "date": "2024-03-10"
+      },
+      {
+        "hash": "w7x8y9z",
+        "message": "Add analytics dashboard with Chart.js",
+        "date": "2024-03-20"
+      },
+      {
+        "hash": "b2c3d4e",
+        "message": "Containerize app and setup Coolify deployment",
+        "date": "2024-03-28"
       }
     ]
   },
@@ -61,8 +77,8 @@
     "title": "AI Chat Application",
     "description": "Intelligent chatbot with natural language processing",
     "techStack": ["React", "Python", "FastAPI", "OpenAI", "Redis"],
-    "liveDemo": "https://ai-chat-demo.com",
-    "github": "https://github.com/username/ai-chat",
+    "liveDemo": "",
+    "github": "",
     "thumbnail": "/images/aichat-thumb.jpg",
     "highlights": [
       "Natural language understanding",

@@ -1,23 +1,27 @@
 'use client';
 
-import { useState, Suspense } from 'react';
+import { useState, Suspense, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { SkillsGraph } from './SkillsGraph';
 import { useAnimationTrigger } from '@/hooks/useAnimationTrigger';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
+import { Skill } from '@/types/skill';
 import skillsData from '@/data/skills.json';
 
 export const Skills: React.FC = () => {
-  const [hoveredSkill, setHoveredSkill] = useState<typeof skillsData[0] | null>(null);
+  const [hoveredSkill, setHoveredSkill] = useState<Skill | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { ref, shouldAnimate } = useAnimationTrigger({ threshold: 0.3 });
 
   const categories = ['all', 'frontend', 'backend', 'tools', 'cloud'];
   
-  const filteredSkills = selectedCategory === 'all' 
+  const filteredSkills = useMemo(() => {
+    return selectedCategory === 'all' 
     ? skillsData 
     : skillsData.filter(skill => skill.category === selectedCategory);
 
+  }, [selectedCategory]);
+  
   const skillsByLevel = {
     expert: filteredSkills.filter(skill => skill.level === 'expert'),
     proficient: filteredSkills.filter(skill => skill.level === 'proficient'),
@@ -83,10 +87,38 @@ export const Skills: React.FC = () => {
               </div>
             }> */}
               <SkillsGraph 
+                skillsData={filteredSkills}
                 hoveredSkill={hoveredSkill}
                 onSkillHover={setHoveredSkill}
               />
             {/* </Suspense> */}
+
+            <div className="mt-12 text-center text-sm text-[var(--color-text-secondary)]">
+            {/* Legend */}
+            <motion.div
+              variants={fadeInUp}
+              className="bg-[var(--color-surface)] rounded-lg p-6 h-150px w-650px"
+            >
+              <h4 className="text-lg font-bold text-[var(--color-text-primary)] mb-4">Legend</h4>
+              <div className="space-y-2 text-sm flex justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="w-4 h-4 bg-[var(--color-accent)] rounded-full"></div>
+                  <span className="text-[var(--color-text-primary)]">Expert Level</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-4 h-4 bg-[var(--color-primary)] rounded-full"></div>
+                  <span className="text-[var(--color-text-primary)]">Proficient Level</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-4 h-4 bg-[var(--color-secondary)] rounded-full"></div>
+                  <span className="text-[var(--color-text-primary)]">Learning Level</span>
+                </div>
+              </div>
+              <p className="text-xs text-[var(--color-text-secondary)] mt-4">
+                Node size represents proficiency level. Lines show technology relationships.
+              </p>
+            </motion.div>
+            </div>
           </motion.div>
 
           {/* Skills Details Panel */}
@@ -154,7 +186,7 @@ export const Skills: React.FC = () => {
                 <motion.div
                   key={level}
                   variants={fadeInUp}
-                  className="bg-[var(--color-surface)] rounded-lg p-6"
+                  className="bg-[var(--color-surface)] rounded-lg p-6 max-h-65 overflow-y-auto"
                 >
                   <h4 className={`text-lg font-bold mb-4 ${
                     level === 'expert' ? 'text-[var(--color-accent)]' :
@@ -168,8 +200,8 @@ export const Skills: React.FC = () => {
                       <div
                         key={skill.id}
                         className="flex items-center justify-between p-2 rounded hover:bg-[var(--color-background)] transition-colors cursor-pointer"
-                        onMouseEnter={() => setHoveredSkill(skill)}
-                        onMouseLeave={() => setHoveredSkill(null)}
+                        // onMouseEnter={() => setHoveredSkill(skill)}
+                        // onMouseLeave={() => setHoveredSkill(null)}
                       >
                         <span className="text-[var(--color-text-primary)]">{skill.name}</span>
                         <span className="text-xs text-[var(--color-text-secondary)]">
@@ -182,32 +214,9 @@ export const Skills: React.FC = () => {
               )
             ))}
 
-            {/* Legend */}
-            <motion.div
-              variants={fadeInUp}
-              className="bg-[var(--color-surface)] rounded-lg p-6"
-            >
-              <h4 className="text-lg font-bold text-[var(--color-text-primary)] mb-4">Legend</h4>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-[var(--color-accent)] rounded-full"></div>
-                  <span className="text-[var(--color-text-primary)]">Expert Level</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-[var(--color-primary)] rounded-full"></div>
-                  <span className="text-[var(--color-text-primary)]">Proficient Level</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-[var(--color-secondary)] rounded-full"></div>
-                  <span className="text-[var(--color-text-primary)]">Learning Level</span>
-                </div>
-              </div>
-              <p className="text-xs text-[var(--color-text-secondary)] mt-4">
-                Node size represents proficiency level. Lines show technology relationships.
-              </p>
-            </motion.div>
           </motion.div>
         </div>
+
       </div>
     </section>
   );

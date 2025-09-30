@@ -14,35 +14,48 @@ export const About: React.FC = () => {
   const developerCode = `const developer = {
   name: "Ghulam Shabbir",
   role: "Full Stack Developer",
-  location: "San Francisco, CA",
-  experience: "5+ years",
-  interests: ["AI/ML", "Web3", "Cloud Architecture"],
-  education: {
-    degree: "Computer Science",
-    university: "Stanford University",
-    year: 2018
-  },
-  bio: \`Passionate full-stack developer with expertise in modern 
-        web technologies. I love creating scalable applications 
-        that solve real-world problems and deliver exceptional 
-        user experiences.\`,
-  currentFocus: "Building innovative solutions with React, Node.js, and AI",
+  location: "Lahore, Pakistan", 
+  experience: "3+ years",
+  interests: [
+    ".NET Core",
+    "Angular",
+    "Node.js",
+    "Microservices",
+    "Micro Frontends",
+    "Cloud-Native Solutions",
+    "Docker & Kubernetes",
+    "AI Agents & Automation",
+    "DevOps & CI/CD"
+  ],
+  bio: \`Passionate full-stack developer with expertise in modern web technologies.
+        I love creating scalable applications that solve real-world problems 
+        and deliver exceptional user experiences.\`,
   philosophy: "Code is poetry, and every line should tell a story"
 };`;
 
+  // expertise: {
+  //   backend: [".NET Core", "Node.js", "Microservices"],
+  //   frontend: ["Angular", "React", "Next.js", "Micro Frontends"],
+  //   devops: ["Docker", "Kubernetes", "Azure DevOps", "Google Cloud", "AWS"],
+  //   automation: ["AI Agents", "Process Automation", "CI/CD"]
+  // },
   const transformedContent = {
     name: "Ghulam Shabbir",
     role: "Full Stack Developer",
-    location: "San Francisco, CA",
-    experience: "5+ years",
-    interests: ["AI/ML", "Web3", "Cloud Architecture"],
-    education: {
-      degree: "Computer Science",
-      university: "Stanford University",
-      year: 2018
-    },
+    location: "Lahore, Pakistan",
+    experience: "3+ years",
+    interests: [
+      ".NET Core",
+      "Angular",
+      "Node.js",
+      "Microservices",
+      "Micro Frontends",
+      "Cloud-Native Solutions",
+      "Docker & Kubernetes",
+      "AI Agents & Automation",
+      "DevOps & CI/CD"
+    ],
     bio: `Passionate full-stack developer with expertise in modern web technologies. I love creating scalable applications that solve real-world problems and deliver exceptional user experiences.`,
-    currentFocus: "Building innovative solutions with React, Node.js, and AI",
     philosophy: "Code is poetry, and every line should tell a story"
   };
 
@@ -177,7 +190,11 @@ export const About: React.FC = () => {
               >
                 <div className="w-full h-full bg-[var(--color-background)] rounded-full flex items-center justify-center">
                   <div className="w-56 h-56 bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-primary)] rounded-full flex items-center justify-center text-6xl font-bold text-[var(--color-background)]">
-                    GS
+                    <img
+                      src="/profile-img.jpg"
+                      alt="Profile"
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -186,7 +203,7 @@ export const About: React.FC = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {[
-                { label: 'Years Experience', value: '5+' },
+                { label: 'Years Experience', value: '3+' },
                 { label: 'Projects Completed', value: '50+' },
                 { label: 'Technologies', value: '20+' },
                 { label: 'Coffee Cups', value: '∞' },
@@ -209,18 +226,19 @@ export const About: React.FC = () => {
             {/* Quick Links */}
             <div className="flex justify-center space-x-4">
               {[
-                { label: 'Resume', href: '/resume.pdf', icon: '📄' },
-                { label: 'LinkedIn', href: '#', icon: '💼' },
-                { label: 'GitHub', href: '#', icon: '🐙' },
+                { label: 'Resume', href: '/resume.pdf', icon: '/resume.png' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ghulam-shabbir-a396bc5', icon: '/linkedin.png' },
+                { label: 'GitHub', href: 'https://github.com/Muntazir86', icon: '/github.png' },
               ].map((link, index) => (
                 <motion.a
                   key={index}
                   href={link.href}
+                  target='_blank'
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex items-center space-x-2 px-4 py-2 bg-[var(--color-primary)] text-white rounded-lg hover:bg-[var(--color-secondary)] transition-colors"
                 >
-                  <span>{link.icon}</span>
+                  <img src={link.icon} alt={link.label} className="w-5 h-5" />
                   <span>{link.label}</span>
                 </motion.a>
               ))}

@@ -1,50 +1,38 @@
 [
   {
     "id": "1",
-    "company": "Tech Innovations Inc.",
-    "role": "Senior Full Stack Developer",
-    "duration": "2022 - Present",
-    "location": "San Francisco, CA",
-    "logo": "/logos/tech-innovations.png",
-    "technologies": ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
+    "company": "CureMD",
+    "role": "Senior Software Engineer",
+    "duration": "2023 - Present", 
+    "location": "Lahore, PK",
+    "logo": "/logos/curemd.png",
+    "technologies": ["Angular", ".Net", "React", "Node.js", "TypeScript", "Azure", "MSSQL", "PostgreSQL"],
     "achievements": [
-      "Led development of microservices architecture serving 1M+ users",
-      "Reduced application load time by 40% through optimization",
-      "Mentored 5 junior developers and established code review processes",
-      "Implemented CI/CD pipeline reducing deployment time by 60%"
+      "Led architecture and development of micro-frontend solutions improving team productivity",
+      "Reduced application load time by 40% through Angular performance optimizations",
+      "Designed and implemented scalable RESTful APIs using .NET Core",
+      "Established code review processes and mentored junior developers",
+      "Optimized CI/CD pipelines reducing deployment time by 60%",
+      "Collaborated with Business Analysts to align technical solutions with requirements"
     ],
-    "description": "Leading full-stack development for enterprise applications with focus on scalability and performance."
+    "description": "Software Architect and Team Lead focusing on enterprise application development, technical mentorship, and implementing scalable architectural solutions using Angular and .NET Core."
   },
   {
     "id": "2",
-    "company": "StartupXYZ",
-    "role": "Frontend Developer",
-    "duration": "2020 - 2022",
-    "location": "New York, NY",
-    "logo": "/logos/startupxyz.png",
-    "technologies": ["React", "Redux", "JavaScript", "SASS", "Jest"],
+    "company": "Rebootmonkey",
+    "role": "Software Engineer",
+    "duration": "Mar 2024 - Aug 2024",
+    "location": "Remote",
+    "logo": "/logos/rebootmonkey.png",
+    "technologies": ["Angular", "Python", "FastAPI", "ngZorro"],
     "achievements": [
-      "Built responsive web applications from scratch",
-      "Improved user engagement by 35% through UX enhancements",
-      "Collaborated with design team to implement pixel-perfect interfaces",
-      "Established testing framework with 90% code coverage"
+      "Reduced initial load time by 40% through Angular SSR optimizations",
+      "Developed critical features driving business growth metrics",
+      "Implemented responsive UI components using ngZorro design framework",
+      "Managed CI/CD pipelines and version control through GitLab",
+      "Established thorough testing protocols ensuring application stability",
+      "Served as code reviewer enforcing architectural patterns and standards"
     ],
-    "description": "Developed user-facing features for a fast-growing fintech startup."
-  },
-  {
-    "id": "3",
-    "company": "Digital Agency Pro",
-    "role": "Web Developer",
-    "duration": "2018 - 2020",
-    "location": "Austin, TX",
-    "logo": "/logos/digital-agency.png",
-    "technologies": ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
-    "achievements": [
-      "Delivered 20+ client websites with 100% on-time completion",
-      "Increased client satisfaction scores by 25%",
-      "Optimized websites for SEO resulting in 50% traffic increase",
-      "Trained team on modern development practices"
-    ],
-    "description": "Created custom websites and web applications for diverse client portfolio."
+    "description": "Full-stack engineer specializing in Angular SSR optimization, UI/UX development, and DevOps practices. Focused on delivering high-performance web applications with enhanced SEO capabilities."
   }
 ]

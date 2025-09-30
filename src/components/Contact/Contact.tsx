@@ -239,25 +239,25 @@ export const Contact: React.FC = () => {
                   {
                     icon: '📧',
                     label: 'Email',
-                    value: 'ghulam.shabbir@example.com',
-                    href: 'mailto:ghulam.shabbir@example.com'
+                    value: 'eng.shabbirr@gmail.com',
+                    href: 'mailto:eng.shabbirr@gmail.com'
                   },
                   {
                     icon: '💼',
                     label: 'LinkedIn',
-                    value: '/in/ghulam-shabbir',
-                    href: 'https://linkedin.com/in/ghulam-shabbir'
+                    value: '/in/ghulam-shabbir-a396bc5',
+                    href: 'https://linkedin.com//in/ghulam-shabbir-a396bc5'
                   },
                   {
                     icon: '🐙',
                     label: 'GitHub',
-                    value: '/ghulam-shabbir',
-                    href: 'https://github.com/ghulam-shabbir'
+                    value: '/Muntazir86',
+                    href: 'https://github.com/Muntazir86'
                   },
                   {
                     icon: '📍',
                     label: 'Location',
-                    value: 'San Francisco, CA',
+                    value: 'Lahore, PK',
                     href: null
                   }
                 ].map((contact, index) => (

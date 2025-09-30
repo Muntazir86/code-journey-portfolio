@@ -48,13 +48,9 @@ export const Experience: React.FC = () => {
                 {/* Timeline Dot */}
                 <div className="absolute -left-20 top-8 w-4 h-4 bg-[var(--color-accent)] rounded-full border-4 border-[var(--color-background)] hidden md:block" />
                 
-                {/* Company Logo Placeholder */}
+                {/* Company Logo */}
                 <div className="flex items-start space-x-4 mb-4">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg">
-                      {job.company.split(' ').map(word => word[0]).join('').slice(0, 2)}
-                    </span>
-                  </div>
+                    <img src={job.logo} alt={job.company} className="w-12 h-12 object-contain rounded-lg" />
                   
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
@@ -125,10 +121,10 @@ export const Experience: React.FC = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { label: 'Years Experience', value: '5+', icon: '⏱️' },
-              { label: 'Companies', value: '3', icon: '🏢' },
-              { label: 'Team Members Led', value: '12+', icon: '👥' },
-              { label: 'Projects Delivered', value: '25+', icon: '🚀' },
+              { label: 'Years Experience', value: '3+', icon: '⏱️' },
+              { label: 'Companies', value: '2', icon: '🏢' },
+              { label: 'Team Members Led', value: '10+', icon: '👥' },
+              { label: 'Projects Delivered', value: '50+', icon: '🚀' },
             ].map((stat, index) => (
               <motion.div
                 key={index}
