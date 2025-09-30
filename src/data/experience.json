@@ -5,7 +5,7 @@
     "role": "Senior Software Engineer",
     "duration": "2023 - Present", 
     "location": "Lahore, PK",
-    "logo": "/logos/curemd.png",
+    "logo": "logos/curemd.png",
     "technologies": ["Angular", ".Net", "React", "Node.js", "TypeScript", "Azure", "MSSQL", "PostgreSQL"],
     "achievements": [
       "Led architecture and development of micro-frontend solutions improving team productivity",
@@ -23,7 +23,7 @@
     "role": "Software Engineer",
     "duration": "Mar 2024 - Aug 2024",
     "location": "Remote",
-    "logo": "/logos/rebootmonkey.png",
+    "logo": "logos/rebootmonkey.png",
     "technologies": ["Angular", "Python", "FastAPI", "ngZorro"],
     "achievements": [
       "Reduced initial load time by 40% through Angular SSR optimizations",

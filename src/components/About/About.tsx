@@ -191,7 +191,7 @@ export const About: React.FC = () => {
                 <div className="w-full h-full bg-[var(--color-background)] rounded-full flex items-center justify-center">
                   <div className="w-56 h-56 bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-primary)] rounded-full flex items-center justify-center text-6xl font-bold text-[var(--color-background)]">
                     <img
-                      src="/profile-img.jpg"
+                      src="images/profile-img.jpg"
                       alt="Profile"
                       className="w-full h-full object-cover rounded-full"
                     />
@@ -226,9 +226,9 @@ export const About: React.FC = () => {
             {/* Quick Links */}
             <div className="flex justify-center space-x-4">
               {[
-                { label: 'Resume', href: '/resume.pdf', icon: '/resume.png' },
-                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ghulam-shabbir-a396bc5', icon: '/linkedin.png' },
-                { label: 'GitHub', href: 'https://github.com/Muntazir86', icon: '/github.png' },
+                { label: 'Resume', href: '/resume.pdf', icon: 'images/resume.png' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ghulam-shabbir-a396bc5', icon: 'images/linkedin.png' },
+                { label: 'GitHub', href: 'https://github.com/Muntazir86', icon: 'images/github.png' },
               ].map((link, index) => (
                 <motion.a
                   key={index}

@@ -6,7 +6,7 @@
     "techStack": ["Angular", "Flask", "PostgreSQL"],
     "liveDemo": "https://www.rebootmonkey.com/",
     "github": "",
-    "thumbnail": "/images/rebootmonkey.png",
+    "thumbnail": "images/rebootmonkey.png",
     "highlights": [
       "Enterprise-grade Angular SSR architecture",
       "Interactive geographical visualization with Mapbox API",
@@ -40,7 +40,7 @@
     "techStack": ["Angular", "TypeScript", "Ruby on Rails", "Docker", "Coolify"],
     "liveDemo": "",
     "github": "",
-    "thumbnail": "/images/appointment-thumbnail.jpg",
+    "thumbnail": "images/appointment-thumbnail.jpg",
     "highlights": [
       "Seamless Amelia API integration for backend management",
       "Responsive Angular frontend with modern UI/UX",
@@ -79,7 +79,7 @@
     "techStack": ["React", "Python", "FastAPI", "OpenAI", "Redis"],
     "liveDemo": "",
     "github": "",
-    "thumbnail": "/images/aichat-thumb.jpg",
+    "thumbnail": "images/aichat-thumb.jpg",
     "highlights": [
       "Natural language understanding",
       "Context-aware responses",
